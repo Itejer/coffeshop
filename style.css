@@ -1,0 +1,455 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: 'poppins',sans-serif;
+}
+
+body{
+    background: #000;
+}
+
+.navbar{
+    height: 60px;
+    background:#000;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar .logo{
+    margin-left: 50px;
+}
+
+.navbar nav ul li{
+    display: inline-block;
+    margin-right: 40px;
+    line-height: 60px;
+}
+
+.navbar nav ul li a{
+    font-size: 19px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.navbar nav ul li a:hover{
+    color: orange;
+    transition: .5s;
+}
+.navbar .extra{
+    line-height: 60px;
+}
+
+.navbar .extra .search-box{
+    background-color: #fff;
+    width: 100%;
+    padding: 8px;
+    border-radius: 28px;
+}
+
+
+.navbar .extra .search-box input{
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+
+.navbar .extra .search-box .bx{
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.navbar .extra .cart{
+    color: #fff;
+    font-size: 23px;
+    margin-left: 120px;
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+
+.navbar .menu-icon{
+    color: #fff;
+    font-size: 35px;
+    margin-right: 10px;
+    line-height: 60px;
+    cursor: pointer;
+    display: none;
+}
+
+
+/*----------media for media screen ---------*/
+@media (max-width:951px){
+
+    .navbar nav ul li{
+        margin-right: 20px;
+    }
+    
+    .navbar nav ul li a{
+        font-size: 16px;
+    }
+
+    .navbar .extra .cart{
+        margin-left: 40px;
+    }
+
+}
+
+
+/*--------------Media query for mobile screen below 756px --------------*/
+@media (max-width:756px){
+
+    .navbar .logo{
+        margin-left: 0px;
+    }
+    
+    .navbar nav ul{
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #1a1100;
+        height: 90%;
+        width: 0%;
+        overflow: hidden;
+        transition: .5s;
+    
+    }
+    .navbar nav ul li{
+        display: block;
+        padding: 25px;
+    }
+
+    .navbar .extra .cart{
+        margin-left: 20px;
+    }
+
+    .navbar .menu-icon{
+        display: block;
+    }
+
+}
+
+
+/*---------cart page styling---------*/
+
+.cart-page{
+    width: 0px;
+    height: 90%;
+    background-color: #fff;
+    margin: auto;
+    position:absolute;
+    right: 0;
+    z-index: 90;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.cart-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.cart-item img{
+    width: 90px;
+    border-radius: 50%;
+}
+
+.cart-item .item-details h2{
+    font-size: 17px;
+}
+
+.cart-item .remove-item{
+    font-size: 40px;
+    color: #000;
+    cursor: pointer;
+}
+
+.cart-page .cart-btn{
+    border: none;
+    outline: none;
+    padding: 10px;
+    width: 80%;
+    margin: 20px 10% 0 10%;
+    background-color: orange;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/*--------The main section styling start here ----------*/
+
+main{
+    width: 100%;
+    height: calc(100vh - 60px);
+    background-image:linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.5)),
+    url(images/coffe.jpg);
+    background-size: contain;
+    background-position: right;
+}
+
+.main-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-content .texts{
+    margin:80px;
+    padding-top: 50px;
+}
+
+.main-content .texts h1{
+    color: #fff;
+    font-size: 36px;
+    padding-bottom: 20px;
+}
+
+.main-content .texts h3{
+    color: #fff;
+    font-weight: 300;
+    padding-bottom: 20px;
+}
+
+.main-content .texts p{
+    color: #fff;
+    padding-bottom: 40px;
+}
+
+.main-content .texts .buttons button{
+    border-radius: 30px 2px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    width: 180px;
+}
+
+.main-content .texts .buttons .order{
+    background-color:inherit;
+    border:2px solid orange
+}
+
+
+.main-content .texts .buttons .order a{
+    color: #fff;
+}
+
+.main-content .texts .buttons .order:hover{
+    background:#000;
+    transition: .5s;
+}
+
+
+
+.main-content .texts .buttons .more{
+    background:orange;
+    margin-left: 20px;
+}
+
+.main-content .texts .buttons .more a{
+    color: inherit;
+
+}
+
+.main-content .texts .buttons .more:hover{
+    background:inherit;
+    color: #fff;
+    transition: .5s;
+}
+
+
+/*-----------shop styling------------*/
+
+.shop .items-boxes{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-right: 30px;
+
+}
+
+.shop .item{
+    width: 120px;
+    height: auto;
+    box-shadow: 0 15px 35px rgba(77, 9, 9, 0.4);
+    background: rgba(225, 225, 225, 0.2);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    padding-top: 8px;
+}
+
+.shop .item:hover{
+    background:#000;
+    transform: scale(1.1);
+    transition: .5s;
+}
+
+.shop .item img{
+    width: 110px;
+}
+
+.shop .item h2{
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 3px;
+    color: #fff;
+}
+
+.shop .item p{
+    font-size: 12px;
+    font-weight: 500;
+    padding-top: 5px;
+    color: #fff;
+
+}
+
+.shop .item .bx{
+    font-size: 13px;
+    color: orange;
+}
+
+.shop .item button{
+    background:#000;
+    color: #fff;
+    border: 3px solid #fff;
+    padding: 3px;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+
+.social-media{
+    margin-top: 170px;
+}
+
+
+
+.social-media .bx{
+    color: #fff;
+    font-size: 20px;
+    border: 2px solid #999;
+    padding: 2px;
+    border-radius: 8px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.social-media .bx:hover{
+    color: orange;
+    transition: .5s;
+}
+
+
+/*-----------main for mobile screen ---------------*/
+
+
+
+@media (max-width:756px){
+    main{
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        height: 150vh;
+    }
+
+    .main-content{
+        flex-direction: column;
+    }
+
+    .main-content.texts{
+        padding-top: 0px;
+        margin-top: 60px;
+    }
+
+    .main-content .texts h1{
+        font-size: 34px;
+    }
+
+    .main-content .texts h3{
+        padding-bottom: 18px;
+    }
+
+    .main-content .texts p{
+        font-size: 14px;
+    }
+
+    .main-content .texts .buttons button{
+        width: 150px;
+    }
+
+    .social-media{
+        margin-top: 40px;
+    }
+
+    .shop .items-boxes{
+        flex-direction: row;
+        margin-top: 130px;
+    }
+
+
+    .shop .item{
+        margin-left: 30px;
+    }
+}
+
+
+
+/*-----------------media query for smaller phones------------*/
+
+@media (max-width:389px){
+    .navbar .logo{
+        width:60px;
+        height: 60px;
+    }
+
+    .navbar .extra .search-box input{
+        width: 40%;
+    }
+
+    .navbar .extra .cart{
+        margin-right: 0px;
+    }
+
+
+    .main-content{
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .main-content .texts{
+        width:100%;
+        padding: 10px;
+    }
+
+    .main-content .texts h1{
+        font-size: 26px;
+        
+    }
+
+    .main-content .texts h3{
+        font-size: 15px;
+    }
+
+    .main-content .texts p{
+        font-size: 13px;
+    }
+
+    .shop .item{
+        margin-left: 5px;
+        width: 100px;
+    }
+
+    .shop .item img{
+        width: 95px;
+    }
+}

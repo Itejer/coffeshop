@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffeshop</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!----------boxicons cdn---------->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <!----------header----------->
+
+    <header>
+
+        <div class="navbar">    
+            <img src="images/logo.png" alt="Coffeshop" class="logo">
+
+            <nav>
+                <ul id="menuList">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Review</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="extra">
+                <span class="search-box">
+                    <input type="text" placeholder="Search...">
+                    <i class='bx bx-search'></i>
+                </span>
+
+                <i class='bx bxs-shopping-bag cart' onclick="openCart()"></i>
+            </div>
+            
+            <i class='bx bx-menu menu-icon' onclick="openNav()"></i>
+           
+        </div>
+
+
+        <!----------cart-page----------->
+
+        <div class="cart-page" id="cartPage">
+
+            <div class="cart-boxes">
+                <div class="cart-item" id="cartItem1">
+                    <img src="images/coffe1.jpeg">
+                    <span class="item-details">
+                        <h2>Cold coffe + choco</h2>
+                        <p>$18.00</p>
+                    </span>
+                    <i class='bx bx-x remove-item'
+                     onclick="document.getElementById('cartItem1').style.display = 'none'"></i>
+                </div>
+
+                <div class="cart-item" id="cartItem2">
+                    <img src="images/coffe2.jpeg">
+                    <span class="item-details">
+                        <h2>Lattle coffe in cup</h2>
+                        <p>$14.99</p>
+                    </span>
+                    <i class='bx bx-x remove-item'
+                     onclick="document.getElementById('cartItem2').style.display = 'none'"></i>
+                </div>
+
+                <div class="cart-item" id="cartItem3">
+                    <img src="images/coffe3.jpeg">
+                    <span class="item-details">
+                        <h2>Iced coffe + choco</h2>
+                        <p>$19.00</p>
+                    </span>
+                    <i class='bx bx-x remove-item'
+                    onclick="document.getElementById('cartItem3').style.display = 'none'"></i>
+                </div>
+
+                <div class="cart-item" id="cartItem4">
+                    <img src="images/coffe4.jpeg">
+                    <span class="item-details">
+                        <h2>20 oz vanilla coffe</h2>
+                        <p>$21.20</p>
+                    </span>
+                    <i class='bx bx-x remove-item'
+                    onclick="document.getElementById('cartItem4').style.display = 'none'"></i>
+                </div>
+                <button class="cart-btn">Checkout Now</button>
+            </div>
+        </div>
+
+
+    </header>
+
+
+    <!------the main section start here------------>
+    <main>
+        <div class="main-content">
+
+            <div class="texts">
+                <h1>Early Morning Coffe</h1>
+                <h3>Start your Day with Excitement</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.<br>
+                 Cupiditate aliquid, soluta rerum veniam provident tempora.<br>
+                Repellat repellendus impedit accusantium est?
+                </p>
+                <div class="buttons">
+                    <button class="order"><a href="">Order Now</a></button>
+                    <button class="more"><a href="">Learn More</a></button>
+                </div>
+                <!-------social media links---->
+
+                <div class="social-media">
+                    <i class='bx bxl-facebook'></i>
+                    <i class='bx bxl-youtube'></i>
+                    <i class='bx bxl-instagram'></i>
+                    <i class='bx bxl-twitter'></i>
+                </div>
+
+            </div>
+
+            
+
+            <div class="shop">
+
+                <div class="items-boxes">
+                    <div class="item">
+                        <img src="images/cart3.jpg">
+                        <h2>Epresso Coffe</h2>
+                        <p>$2.99 - $4.00</p>
+                        <span class="stars">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star-half'></i>
+                        </span>
+
+                        <button>Add to Cart</button>
+                        
+                    </div>
+
+                    <div class="item">
+                        <img src="images/cart1.jpg">
+                        <h2>Epresso Coffe</h2>
+                        <p>$2.99 - $4.00</p>
+                        <span class="stars">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star-half'></i>
+                        </span>
+
+                        <button>Add to Cart</button>
+                        
+                    </div>
+
+                    <div class="item">
+                        <img src="images/cart4.jpg">
+                        <h2>Epresso Coffe</h2>
+                        <p>$2.99 - $4.00</p>
+                        <span class="stars">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star-half'></i>
+                        </span>
+
+                        <button>Add to Cart</button>
+                        
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </main>
+    
+
+
+    <script>
+
+        var menuList = document.getElementById('menuList');
+        function openNav(){
+            if(menuList.style.width == '0%'){
+                menuList.style.width = '100%';
+            }
+            else{
+                menuList.style.width = '0%';
+            }
+        }
+
+
+        var  cartPage = document.getElementById('cartPage');
+
+        function openCart(){
+            if( cartPage.style.width == '0px'){
+                cartPage.style.width = '320px';
+            }
+            else{
+                cartPage.style.width = '0px';
+            }
+        }
+
+    </script>
+</body>
+</html>
